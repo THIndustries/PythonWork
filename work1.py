@@ -24,18 +24,15 @@ print(f'Сумма цифр числа {my_num} = {num1 + num2 + num3} ({num3} +
 # 60 -> 10 40 10
 # 80 -> 15 60 15
 # 120 -> 20 80 20
+'''
+num = int(input('Введите число: '))
+num_x = num // 6
+num1 = num_x
+num2 = (num_x + num_x) * 2
+num3 = num_x
+print(round(num1), round(num2), round(num3))
 
-# num = int(input('Введите число: '))
-# num_x = num / 6
-# num1 = num_x
-# num2 = (num_x + num_x) * 2
-# num3 = num_x
-# print(round(num1), round(num2), round(num3))
-
-# petya = num
-# sereg =
-# katya = (petya + sereg) * 2
-
+'''
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Задача 6: Вы пользуетесь общественным транспортом? Вероятно, вы
@@ -75,12 +72,14 @@ else:
 # 3 2 4 -> yes
 # 3 2 1 -> no
 
+n = int(input('Введите n: '))
+m = int(input('Введите m: '))
+k = int(input('Введите k: '))
 
-
-
-
-
-
-
-
-
+if n * m > k:
+    if k % n == 0 or k % m == 0:
+        print('yes')
+    else:
+        print('no')
+else:
+    print('no')
