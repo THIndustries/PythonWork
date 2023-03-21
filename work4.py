@@ -11,35 +11,24 @@ os.system('cls')
 # 3 6 9 12 15 18
 # 6 12
 
-size_n = int(input('Введите кол-во элементов n множества: '))
-size_m = int(input('Введите кол-во элементов m множества: '))
-num_set1 = set()
-num_set2 = set()
+# size_n = int(input('Введите кол-во элементов n множества: '))
+# size_m = int(input('Введите кол-во элементов m множества: '))
+# num_set1 = set()
+# num_set2 = set()
+# for i in range(size_n):
+#     num_set1.add(int(input(f'Введите {i+1}e значение для множества n: ')))
+# print()
+# for i in range(size_m):
+#     num_set2.add(int(input(f'Введите {i+1}e значение для множества m: ')))
+# # print(num_set1, num_set2)
+# res_list = list(num_set1.intersection(num_set2))
 
-for i in range(size_n):
-    num_set1.add(int(input(f'Введите {i+1}e значение для множества n: ')))
-print()
-for i in range(size_m):
-    num_set2.add(int(input(f'Введите {i+1}e значение для множества m: ')))
-# print(num_set1, num_set2)
-
-res_list = list(num_set1.intersection(num_set2))
-
-for i in range(len(res_list)-1):
-    if res_list[i] > res_list[i+1]:
-        temp = res_list[i]
-        res_list[i] = res_list[i+1]
-        res_list[i+1] = temp    
-print(res_list)
-
-
-
-
-
-
-
-
-
+# for i in range(len(res_list)-1):
+#     if res_list[i] > res_list[i+1]:
+#         temp = res_list[i]
+#         res_list[i] = res_list[i+1]
+#         res_list[i+1] = temp    
+# print(res_list)
 
 # Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. Она растет на
 # круглой грядке, причем кусты высажены только по окружности. Таким образом, у
@@ -57,14 +46,25 @@ print(res_list)
 # 4 -> 1 2 3 4
 # 9
 
+n = int(input('Введите кол-во кустов: '))
+# dict_1 = dict()
+# for i in range(n):
+#     key = input('введите ключь:')
+#     val = input('введите значение:')
+#     dict_1[key] = val
+list_1 = list()
+for i in range(n):
+    list_1.append(int(input(f'Введите кол-во ягод у {i+1}го куста: ')))
+num = int(input('Введите номер куста для сбора: '))
 
-
-
-
-
-
-
-
+result = 0
+list_res = list()
+for i in range(len(list_1) - 1):
+    list_res.append(list_1[i -1]+list_1[i]+list_1[i + 1])
+list_res.append(list_1[i -2]+list_1[i-1]+list_1[0])
+print(list_1)
+print()
+print(max(list_res))
 
 
 
