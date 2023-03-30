@@ -5,14 +5,14 @@ os.system('cls')
 # Формула для получения n-го члена прогрессии: an = a1 + (n-1) * d.
 # Каждое число вводится с новой строки.
 
-# def arifm():
-#     n_start,n_step, n_count = map(int,input('Введите через пробел начало, шаг и размер соответственно->').split())
-#     my_list =[]
-#     n_end = n_start + (n_count - 1) * n_step
-#     for i in range(n_start, n_end + 1, n_step):
-#         my_list.append(i)
-#     return my_list
-# print(arifm())
+def arifm():
+    n_start,n_step, n_count = map(int,input('Введите через пробел начало, шаг и размер соответственно->').split())
+    my_list =[]
+    n_end = n_start + (n_count - 1) * n_step
+    for i in range(n_start, n_end + 1, n_step):
+        my_list.append(i)
+    return my_list
+print(arifm())
 
 
 
